@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>ARTEM & ELIZAVETA</title>
+	<meta name="description" content="Приглашаем Вас на свадьбу Артема и Елизаветы"> 
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -36,9 +37,9 @@
 	<div class="title">SAVE THE DATE</div>
 	<div class="date">27/04/2025</div>
 	<div class="images">
-		<img class="img" src="imgs/top.png" alt="">
-		<img class="img" src="imgs/timer.png" alt="">
-		<img class="img" src="imgs/top.png" alt="">
+		<img class="img" src="imgs/date-s-1.png" alt="">
+		<img class="img" src="imgs/date-s-2.png" alt="">
+		<img class="img" src="imgs/date-s-3.png" alt="">
 	</div>
 	<div class="locations">
 		<div class="locations_title">TIMING OF THE DAY</div>
@@ -63,9 +64,9 @@
 		<div class="content">
 			<div class="title">LOCATION</div>
 			<div class="text">Concert Hall CORTESIA Ресторанный комплекс “Старый колодец” Краснодар, ул. Раздельная, 45</div>
-			<a href="#" class="button">Посмотреть карту локаций</a>
+			<a href="https://yandex.ru/maps/?um=constructor%3Abda1f457f59dce997190f1117f97b059258b40dcf870adc36a381cbefe5048ce&source=constructorLink" target="blank" class="button">Посмотреть карту локаций</a>
 		</div>
-		<img class="img" src="imgs/top.png" alt="">
+		<img class="img" src="imgs/location.png" alt="">
 	</div>
 	<div class="timer-content">
 		<img class="img" src="imgs/timer.png" alt="">
@@ -96,16 +97,19 @@
 </div>
 <div class="photos">
 	<div class="slider">
-		<div class="swiper">
+		<div class="swiper photos-swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img class="img" src="imgs/top.png" alt="">
+					<img class="img" src="imgs/f-s-1.png" alt="">
 				</div>
 				<div class="swiper-slide">
-					<img class="img" src="imgs/top.png" alt="">
+					<img class="img" src="imgs/f-s-2.png" alt="">
 				</div>
 				<div class="swiper-slide">
-					<img class="img" src="imgs/top.png" alt="">
+					<img class="img" src="imgs/f-s-3.png" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img class="img" src="imgs/f-s-4.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -115,7 +119,7 @@
 	</div>
 	<div class="text_block">
 		<div class="text">Фото торжества можно посмотреть в нашем телеграм канале</div>
-		<a href="#" class="button">Вступить в телеграм канал</a>
+		<a href="https://t.me/+lXGJ2asZ3p42YzVi" target="blank" class="button">Вступить в телеграм канал</a>
 	</div>
 </div>
 <div class="info">
@@ -145,8 +149,12 @@
 </body>
 </html>
 <script>
-const swiper = new Swiper('.swiper', {
+const photosSwiper = new Swiper('.photos-swiper', {
 	loop: true,
+
+	autoplay: {
+		delay: 5000,
+	},
 
 	navigation: {
 		nextEl: '.swiper-button-next',
@@ -180,4 +188,22 @@ function updateTimer() {
 updateTimer();
 
 const intervalId = setInterval(updateTimer, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.date-content .images');
+    
+    function scrollToCenter() {
+        const scrollWidth = container.scrollWidth;
+        const clientWidth = container.clientWidth;
+        const middlePoint = (scrollWidth - clientWidth) / 2;
+        
+        container.scrollTo({
+            left: middlePoint,
+            behavior: 'smooth'
+        });
+    }
+    
+    scrollToCenter();
+    window.addEventListener('resize', scrollToCenter);
+});
 </script>

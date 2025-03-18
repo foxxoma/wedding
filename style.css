@@ -85,12 +85,15 @@ body {
 .date-content .images {
 	margin-top: 40px;
 	width: 100%;
+	max-width: 600px;
 	overflow-x: scroll;
 	display: flex;
 	flex-wrap: nowrap;
 	gap: 7px;
 	height: 33vh;
-	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+/*	justify-content: center;*/
 	scrollbar-width: none;
 }
 .date-content .images::-webkit-scrollbar {
@@ -317,6 +320,7 @@ body {
 }
 .info .block .items .item .key {
 	flex: 1;
+	padding-right: 10px;
 }
 .info .block .items .item .value {
 	font-size: 16px;
