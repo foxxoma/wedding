@@ -18,6 +18,9 @@
 
 </head>
 <body>
+<div class="preloader">
+	<img class="svg" src="imgs/load.svg">
+</div>
 <div class="top-content">
 	<img class="top-content_img" src="imgs/top.png" alt="">
 	<div class="top-content_text_block">
@@ -144,11 +147,11 @@
 		<div class="name">Адреса:</div>
 		<div class="items">
 			<div class="item">
-				<div class="key">Утро у жениха</div>
+				<div class="key">Утро жениха</div>
 				<div class="value">Краснодарский край, ст-ца Динская, ул. 70 лет Октября, дом 24</div>
 			</div>
 			<div class="item">
-				<div class="key">Утро у невесты</div>
+				<div class="key">Утро невесты</div>
 				<div class="value">г. Краснодар, проезд Энгельса, дом 24</div>
 			</div>
 			<div class="item">
@@ -221,5 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     scrollToCenter();
     window.addEventListener('resize', scrollToCenter);
+
+    setTimeout(() => {
+        document.querySelector('.preloader').classList.add('hidden');
+    }, 1700);
 });
 </script>
