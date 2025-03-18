@@ -147,7 +147,7 @@ body {
 
 
 .restaurant {
-	height: 33vh;
+	min-height: 250px;
 	display: flex;
 	flex-wrap: nowrap;
 	width: 100%;
@@ -157,6 +157,7 @@ body {
 }
 .restaurant .img {
 	width: 35%;
+	min-height: 250px;
 	height: 100%;
 	object-fit: cover;
 }
@@ -246,17 +247,21 @@ body {
 	width: 100%;
 }
 .photos .swiper {
-	height: 500px;
-	width: 326px;
+	max-height: 500px;
+	max-width: 326px;
+	height: calc(100vh - 240px);
+    width: calc(100% - 40px);
 }
 .photos .swiper-slide img {
-	height: 500px;
-	width: 326px;
+	max-height: 500px;
+	max-width: 326px;
+	height: calc(100vh - 240px);
+    width: calc(100% - 40px);
 	object-fit: cover;
 }
 .photos .swiper-button-next:after, .photos .swiper-button-prev:after {
 	color: #000;
-	font-size: 20px!important;
+	font-size: 14px!important;
 }
 .photos .title {
 	margin-top: 20px;
