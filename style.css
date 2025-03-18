@@ -345,6 +345,8 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	background-color: #030a02;
+	top: 0;
+	left: 0;
 }
 .preloader.hidden {
 	opacity: 0;
@@ -354,6 +356,7 @@ body {
 
 .preloader .svg {
 	width: 30%;
+	max-width: 300px;
 	animation: puls 1.7s infinite ease-in-out;
 }
 
