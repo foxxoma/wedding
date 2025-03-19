@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ARTEM & ELIZAVETA</title>
-	<meta name="description" content="Приглашаем Вас на свадьбу Артема и Елизаветы"> 
+	<meta name="description" content="Приглашаем Вас на свадьбу Артема и Елизаветы">
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
-	<link rel="stylesheet" href="style.css">
 	<link
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -18,9 +18,43 @@
 
 </head>
 <body>
-<div class="preloader">
+<!-- <div class="preloader">
 	<img class="svg" src="imgs/load.svg">
+</div> -->
+<div class="preloader2" style="
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-color: #fff;
+	z-index: 9999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	filter: alpha(opacity=100);
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	">
+	<img class="logo" src="imgs/logo2.svg" style="
+		width: 50%;
+		max-width: 300px;
+		animation: sc 2s infinite ease-in-out;
+		animation-iteration-count: 1;
+	">
+
+	<div class="top-content_text_block">
+		<div class="text_block_text">
+			<h1 style="color: #000">ARTEM & ELIZAVETA</h1>
+			<p style="color: #000">WEDDING DAY</p>
+		</div>
+	</div>
 </div>
+
 <div class="top-content">
 	<img class="top-content_img" src="imgs/top.jpg" alt="">
 	<div class="top-content_text_block">
@@ -50,7 +84,7 @@
 			<div class="time-name">
 				<div class="time">10:00</div>
 				<div class="dash"></div>
-				<div class="name">УТРО ЖЕНИХА</div>
+				<div class="name">УТРО У ЖЕНИХА</div>
 			</div>
 			<div class="text">Подготовка к торжественной церемонии бракосочетания, последние минуты ожидания</div>
 		</div>
@@ -68,7 +102,7 @@
 				<div class="dash"></div>
 				<div class="name">ВЕНЧАНИЕ</div>
 			</div>
-			<div class="text">Таинство венчания в церкви, священный обряд соединения двух сердец навсегда»</div>
+			<div class="text">Таинство венчания в церкви, священный обряд соединения двух сердец навсегда</div>
 		</div>
 		<div class="location">
 			<div class="time-name">
@@ -76,7 +110,7 @@
 				<div class="dash"></div>
 				<div class="name">РЕСТОРАН</div>
 			</div>
-			<div class="text">Праздничный банкет с друзьями и родственниками, радость и веселье после торжественной церемонии</div>
+			<div class="text">Праздничный банкет с родственниками и друзьями, радость и веселье после торжественной церемонии</div>
 		</div>
 	</div>
 	<div class="restaurant">
@@ -226,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', scrollToCenter);
 
     setTimeout(() => {
-        document.querySelector('.preloader').classList.add('hidden');
-    }, 1000);
+        document.querySelector('.preloader2').classList.add('hidden');
+    }, 1300);
 });
 </script>

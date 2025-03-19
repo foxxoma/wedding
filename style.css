@@ -21,6 +21,19 @@ body {
 	box-shadow: 0px 0px 22px 0px rgba(34, 60, 80, 0.1);
 }
 
+.preloader2.hidden {
+	opacity: 0;
+	visibility: hidden;
+	filter: alpha(opacity=0);
+}
+
+@keyframes sc {
+	0% { transform: scale(1.8); opacity: 1;}
+	45% { transform: scale(1); opacity: 1;}
+	55% { transform: scale(1); opacity: 1;}
+	100% { transform: scale(1); opacity: 1;}
+}
+
 .container {
 	padding-left: 25px;
 	padding-right: 25px;
@@ -37,15 +50,17 @@ body {
 	object-fit: cover;
 	object-position: 68%;
 }
-.top-content .top-content_text_block {
+.top-content_text_block {
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(180.62deg, rgba(0, 0, 0, 0) 64.1%, #000000 99.47%);
 	position: absolute;
 	top: 0;
 	display: flex;
 	justify-content: center;
 	align-items: end;
+}
+.top-content .top-content_text_block {
+	background: linear-gradient(180.62deg, rgba(0, 0, 0, 0) 64.1%, #000000 99.47%);
 }
 .top-content_text_block .text_block_text {
 	text-align: center;
