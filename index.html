@@ -294,10 +294,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function togglePlay() {
 		if (player.paused) {
-			player.volume=0.5;
-			player.play();
 			document.querySelector('.preloader2').classList.add('hidden');
 			document.querySelector('body').style.overflowY = 'auto';
+			player.volume=0.5;
+			player.play();
 		}
 	}
 
