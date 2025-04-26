@@ -246,7 +246,10 @@ function updateTimer() {
     
     if (diff <= 0) {
         clearInterval(intervalId);
-        document.querySelectorAll('.time').forEach(el => el.textContent = '00');
+        document.querySelector('.j-d .time').textContent = String(0).padStart(2, '0');
+	    document.querySelector('.j-h .time').textContent = String(0).padStart(2, '0');
+	    document.querySelector('.j-m .time').textContent = String(0).padStart(2, '0');
+	    document.querySelector('.j-s .time').textContent = String(0).padStart(2, '0');
         return;
     }
     
@@ -260,8 +263,6 @@ function updateTimer() {
     document.querySelector('.j-m .time').textContent = String(minutes).padStart(2, '0');
     document.querySelector('.j-s .time').textContent = String(seconds).padStart(2, '0');
 }
-
-updateTimer();
 
 const intervalId = setInterval(updateTimer, 1000);
 
